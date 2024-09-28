@@ -1,0 +1,248 @@
+:root {
+    --dark-gray-blue: hsl(217, 19%, 35%);
+    --desat-dark-blue: hsl(214, 17%, 51%);
+    --gray-blue: hsl(212, 23%, 69%);
+    --light-gray-blue: hsl(210, 46%, 95%); 
+}
+
+/* Font Family: Manrope font weights: 500 and 700 */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+    font-family: "Manrope", sans-serif;
+    overflow: hidden;
+    
+    background-color: var(--light-gray-blue);
+        margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100vw;
+    min-height: 100dvh;
+
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 29em 45em;
+    grid-template-rows: 28em;
+
+    background-color: white;
+
+    border-radius: 10px;
+}
+
+.left {
+    background: url("./images/drawers.jpg") left center no-repeat ;
+    background-size: cover;
+    display: flex;
+    
+    border-radius: 10px 0 0 10px;
+}
+
+.right {
+    padding: 3.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    color: var(--dark-gray-blue); 
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 2.75rem;
+}
+
+.description {
+    color: var(--desat-dark-blue);
+    font-weight: 500; 
+    font-size: 1.45rem;
+    line-height: 1.5em;
+}
+.date {
+    color: var(--gray-blue);
+}
+
+.user {
+    display: flex;
+    width: 100%;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    grid-template-areas: 
+    "picture name"
+    "picture date";
+
+    align-items: center;
+}
+
+.avatar{ 
+    margin: auto;
+    grid-area: picture;
+    
+    width: 3.5em;
+    margin-right: 20px;
+    border-radius: 30px;
+}
+
+.name, .date {
+    text-align: justify;
+}
+
+.name {
+    grid-area: name;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark-gray-blue);
+}
+
+.date {
+    grid-area: date;
+
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.share-area {
+    width: 3.2rem;
+    height: 3.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-gray-blue);
+
+    border-radius: 30px;
+}
+
+#share {
+    width: 1.3rem;
+    height: 1.3rem;
+    fill: var(--light-gray-blue);
+}
+
+svg {
+    fill: blue;
+}
+
+#links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 15rem;
+    padding: 1rem;
+    border-radius: 10px;
+    
+    background-color: var(--dark-gray-blue);
+    color: var(--gray-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-size: 1rem;
+    
+    right: auto;
+    display: none;
+
+}
+
+/* speech bubble */
+/* .links::before {
+    left: calc(50% - var(--width) / 2);
+    clip-path: polygon(12.5% 0, 87.5% 0, 50% 100%)
+} */
+
+.hidden {
+    display: none;
+}
+
+.attribution { 
+    font-size: 1rem; 
+    text-align: center; 
+    margin-top: 50px;
+
+    width: 100%; 
+    height: 20px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 376px) {
+    body {
+        overflow: auto
+    }
+
+    main {
+        margin: 1em 0;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+        grid-template-rows: 13rem 20em;
+        background-position: top ;
+        grid-template-areas: 
+        "top"
+        "bottom";
+
+        width: 87%;
+    }
+    
+    .left {
+        grid-area: top;
+        width: initial;
+        border-radius: 10px 10px 0px 0px;
+    }
+    
+    .right {
+        grid-area: bottom;
+        padding: 1.6rem;
+    }
+
+    .title {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .avatar {
+        width: 2.5rem;
+    }
+
+    .name {
+        font-size: 0.8rem;
+    }
+
+    .date {
+        font-size: 0.8rem;
+    }
+
+    .share {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .share-area {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    footer.attribution {
+        width: 70%;
+    }
+}
