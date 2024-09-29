@@ -13,7 +13,7 @@ body {
     overflow: hidden;
     
     background-color: var(--light-gray-blue);
-        margin: 0;
+    margin: 0;
 }
 
 main {
@@ -126,34 +126,43 @@ main {
     background-color: var(--light-gray-blue);
 
     border-radius: 30px;
+
+    border: none;
 }
 
-#share {
-    width: 1.3rem;
-    height: 1.3rem;
+/* not effective/useful for this challenge */
+/* .share-area:focus {
+        background-color: var(--desat-dark-blue);
+} */
+
+.share {
+    scale: 1.3;
+    fill: var(--desat-dark-blue);
+}
+
+/* not effective/useful for this challenge */
+/* .share:focus{
     fill: var(--light-gray-blue);
-}
+} */
 
-svg {
-    fill: blue;
-}
-
-#links {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 15rem;
-    padding: 1rem;
-    border-radius: 10px;
-    
-    background-color: var(--dark-gray-blue);
+.share-word {
     color: var(--gray-blue);
     text-transform: uppercase;
     letter-spacing: 0.4rem;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    height: 1rem;
+    padding: 1.75rem;
+    border-radius: 10px;
+    
+    background-color: var(--dark-gray-blue);
     font-size: 1rem;
     
-    right: auto;
-    display: none;
+    position: relative;
+    bottom: 5.5rem;
 
 }
 
@@ -162,6 +171,20 @@ svg {
     left: calc(50% - var(--width) / 2);
     clip-path: polygon(12.5% 0, 87.5% 0, 50% 100%)
 } */
+    
+a img {
+    margin: 0.4rem;
+}
+
+/* works in desktop, but doesn't show in mobile */
+.button-clicked {
+    background-color: var(--desat-dark-blue);
+}
+
+/* not working in desktop, but shows in mobile */
+.share-clicked {
+    fill: var(--light-gray-blue);
+}
 
 .hidden {
     display: none;
@@ -191,7 +214,7 @@ svg {
 
     .card {
         grid-template-columns: 1fr;
-        grid-template-rows: 13rem 20em;
+        grid-template-rows: 13rem 21em;
         background-position: top ;
         grid-template-areas: 
         "top"
@@ -240,6 +263,14 @@ svg {
     .share-area {
         width: 2.5rem;
         height: 2.5rem;
+    }
+
+    .links {
+        position: absolute;
+        bottom: inherit;
+        left: 1.55rem;
+        padding: 2.3rem 4.4rem;
+        border-radius: 0px 0px 10px 10px;
     }
 
     footer.attribution {
