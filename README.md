@@ -33,7 +33,7 @@ Users should be able to:
 
 <ins>My Desktop Solution</ins>:
 
-![My desktop solution](image.png)
+![My desktop solution](my_desktop_solution.png)
 
 <ins>Frontend Mentor's Mobile Solution</ins>:
 
@@ -41,7 +41,7 @@ Users should be able to:
 
 <ins>My Mobile Solution</ins>:
 
-![My mobile solution](image-1.png)
+![My mobile solution](my_mobile_solution.png)
 
 ### Links
 
